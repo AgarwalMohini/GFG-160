@@ -1,0 +1,11 @@
+from collections import Counter
+class Solution:
+    def getSecondLargest(self, arr):
+        # Code Here
+        seen=set(arr)
+        m=max(seen)
+        seen.remove(m)
+        if len(seen)<1:
+            return -1
+        return max(seen)
+        
